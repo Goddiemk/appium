@@ -37,8 +37,9 @@ class ChessAndroidTests(unittest.TestCase):
 
     def test_single_player_mode(self):
         "Test the Chess app launches correctly and click on Play button"
-        element = self.driver.find_element_by_id(
-            "uk.co.aifactory.chessfree:id/ButtonPlay")
+        element = self.driver.find_element_by_android_uiautomator(
+            'new UiSelector().resourceId("uk.co.aifactory.chessfree:id/ButtonPlay")'
+        )
         element.click()
         sleep(5)
 
