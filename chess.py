@@ -2,12 +2,13 @@
 Qxf2: Example script to run one test against the Chess Free app using Appium
 The test will:
 - launch the app
-- click the 'PLAY!' button
+- click the 'PLAY!' button ff
 """
 import os
 import unittest
 from appium import webdriver
 from time import sleep
+
 
 class ChessAndroidTests(unittest.TestCase):
     "Class to run tests against the Chess Free app"
