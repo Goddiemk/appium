@@ -4,12 +4,10 @@ The test will:
 - launch the app
 - click the 'PLAY!' button
 """
-
 import os
 import unittest
 from appium import webdriver
 from time import sleep
-
 
 class ChessAndroidTests(unittest.TestCase):
     "Class to run tests against the Chess Free app"
@@ -42,7 +40,6 @@ class ChessAndroidTests(unittest.TestCase):
         )
         element.click()
         sleep(5)
-
 
 # ---START OF SCRIPT
 if __name__ == '__main__':
