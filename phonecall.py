@@ -3,6 +3,7 @@ from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 from time import sleep
 
+
 class Calltest(unittest.TestCase):
     def setUp(self):
         desired_caps = {}
