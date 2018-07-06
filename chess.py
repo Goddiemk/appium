@@ -2,7 +2,7 @@
 Qxf2: Example script to run one test against the Chess Free app using Appium
 The test will:
 - launch the app
-- click the 'PLAY!' button gg
+- click the 'PLAY!' button
 """
 import os
 import unittest
