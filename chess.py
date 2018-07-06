@@ -41,6 +41,7 @@ class ChessAndroidTests(unittest.TestCase):
         element.click()
         sleep(5)
 
+
 # ---START OF SCRIPT
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(ChessAndroidTests)
