@@ -1,29 +1,19 @@
-"""
-Qxf2: Example script to run one test against the Chess Free app using Appium
-The test will:
-- launch the app
-- click the 'PLAY!' button
-"""
 import os
 import unittest
 from appium import webdriver
+from appium.webdriver.common.touch_action import TouchAction
 from time import sleep
 
 
 class ChessAndroidTests(unittest.TestCase):
-    "Class to run tests against the Chess Free app"
-
     def setUp(self):
         "Setup for the test"
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
         desired_caps['platformVersion'] = '7.0'
         desired_caps['deviceName'] = 'Pixel'
-        # Returns abs path relative to this file and not cwd
         desired_caps['app'] = os.path.abspath(
-            os.path.join(
-                os.path.dirname(__file__),
-                '/home/goddie/Downloads/Chess Free.apk'))
+            'C:/Users/Min Khant Ko Ko/Desktop/chessfree.apk')
         desired_caps['appPackage'] = 'uk.co.aifactory.chessfree'
         desired_caps[
             'appActivity'] = 'uk.co.aifactory.chessfree.ChessFreeActivity'
@@ -31,19 +21,34 @@ class ChessAndroidTests(unittest.TestCase):
                                        desired_caps)
 
     def tearDown(self):
-        "Tear down the test"
         self.driver.quit()
 
-    def test_single_player_mode(self):
-        "Test the Chess app launches correctly and click on Play button"
-        element = self.driver.find_element_by_android_uiautomator(
+    def test_mode(self):
+        element1 = self.driver.find_element_by_android_uiautomator(
             'new UiSelector().resourceId("uk.co.aifactory.chessfree:id/ButtonPlay")'
         )
-        element.click()
-        sleep(5)
+        element1.click()
+        self.driver.implicitly_wait(30)
+        element2 = self.driver.find_element_by_id(
+            'uk.co.aifactory.chessfree:id/CrossProm_ExitButton')
+        element2.click()
+        element3 = self.driver.find_element_by_id(
+            'uk.co.aifactory.chessfree:id/MediumButton')
+        element3.click()
+        element4 = self.driver.find_element_by_id(
+            'uk.co.aifactory.chessfree:id/NewGameSettings_ContinueButton')
+        element4.click()
+        """
+        self.driver.implicitly_wait(30)
+        element5 = self.driver.find_element_by_id(
+            'uk.co.aifactory.chessfree:id/ContinueButton')
+        element5.click()
+        self.driver.implicitly_wait(30)
+        """
+        #TouchAction(driver).tap(x=838, y=1397).perform()
+        #TouchAction(driver).tap(x=721, y=1155).perform()
 
 
-# ---START OF SCRIPT
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(ChessAndroidTests)
     unittest.TextTestRunner(verbosity=2).run(suite)

@@ -8,8 +8,8 @@ class Calltest(unittest.TestCase):
     def setUp(self):
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
-        desired_caps['platformVersion'] = '7.0'
-        desired_caps['deviceName'] = 'Pixel'
+        desired_caps['platformVersion'] = '9.0'
+        desired_caps['deviceName'] = 'Pixel API 28'
         desired_caps['appPackage'] = 'com.android.dialer'
         desired_caps['appActivity'] = 'com.android.dialer.DialtactsActivity'
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub',

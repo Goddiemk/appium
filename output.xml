@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180709 23:38:13.793">
+<suite id="s1" name="Dictionary" source="C:\Users\Min Khant Ko Ko\Documents\Workspace\appium\dictionary.robot">
+<test id="s1-t1" name="First Test">
+<kw name="Set Up And Open Application">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=${NO_RESET}</arg>
+</arguments>
+<status status="PASS" starttime="20180709 23:38:13.977" endtime="20180709 23:38:20.092"></status>
+</kw>
+<status status="PASS" starttime="20180709 23:38:13.977" endtime="20180709 23:38:20.092"></status>
+</kw>
+<kw name="Action 1">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${el1}</arg>
+</arguments>
+<msg timestamp="20180709 23:38:20.092" level="INFO">Clicking element 'accessibility_id=Search'.</msg>
+<status status="PASS" starttime="20180709 23:38:20.092" endtime="20180709 23:38:20.683"></status>
+</kw>
+<status status="PASS" starttime="20180709 23:38:20.092" endtime="20180709 23:38:20.683"></status>
+</kw>
+<kw name="Action 2">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${el2}</arg>
+<arg>doctor</arg>
+</arguments>
+<msg timestamp="20180709 23:38:20.685" level="INFO">Typing text 'doctor' into text field 'id=livio.pack.lang.en_US:id/search_src_text'</msg>
+<status status="PASS" starttime="20180709 23:38:20.684" endtime="20180709 23:38:26.566"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>66</arg>
+</arguments>
+<status status="PASS" starttime="20180709 23:38:26.566" endtime="20180709 23:38:27.076"></status>
+</kw>
+<status status="PASS" starttime="20180709 23:38:20.684" endtime="20180709 23:38:27.077"></status>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="teardown">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20180709 23:38:27.077" endtime="20180709 23:38:28.312"></status>
+</kw>
+<status status="PASS" starttime="20180709 23:38:13.977" endtime="20180709 23:38:28.312" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20180709 23:38:13.797" endtime="20180709 23:38:28.313"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Dictionary">Dictionary</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
