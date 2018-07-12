@@ -10,6 +10,7 @@ class SearchTests(unittest.TestCase):
         self.driver.maximize_window()
 
     def test_unit(self):
+
         self.driver.get("http://myanmarnet.com/")
         element = self.driver.find_element_by_xpath(
             '//*[@id="menu-788-1"]/a')  # go to the desired page
