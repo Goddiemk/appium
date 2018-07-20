@@ -12,6 +12,7 @@ class SearchTests(unittest.TestCase):
     def test_unit(self):
 
         self.driver.get("http://myanmarnet.com/")
+
         element = self.driver.find_element_by_xpath(
             '//*[@id="menu-788-1"]/a')  # go to the desired page
         element.click()
